@@ -2,30 +2,46 @@ export class Age{
 
   constructor(age) {
     this.earthAge = age;
+    this.earthYearsExp;
   }
 
-  mercuryAge() {
+  mercuryAge(years) {
     const mercuryYear = .24;
-    let mercuryYears = (this.earthAge / mercuryYear);
+    let mercuryYears = (years / mercuryYear);
     return mercuryYears; 
   }
 
-  venusAge() {
+  venusAge(years) {
     const venusYear = .62;
-    let venusYears = (this.earthAge / venusYear);
+    let venusYears = (years / venusYear);
     return venusYears; 
   }
 
-  marsAge() {
+  marsAge(years) {
     const marsYear = 1.88;
-    let marsYears = (this.earthAge / marsYear);
+    let marsYears = (years / marsYear);
     return marsYears; 
   }
 
-  jupiterAge() {
+  jupiterAge(years) {
     const jupiterYear = 11.86;
-    let jupiterYears = (this.earthAge / jupiterYear);
+    let jupiterYears = (years / jupiterYear);
     return jupiterYears; 
+  }
+
+  plutoAge(years) {
+    const plutoYear = 248.59;
+    let plutoYears = (years / plutoYear);
+    return plutoYears; 
+  }
+
+  setEarthYearsExp(expYears) {
+    this.earthYearsExp = expYears;
+  }
+
+  remainingYears() {
+    let remainingYears = this.earthYearsExp - this.earthAge;
+    return remainingYears;
   }
 
   dateOfBirth(month, day, year) {

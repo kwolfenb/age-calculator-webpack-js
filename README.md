@@ -19,10 +19,11 @@ _Create a program that calculates a user's age on other planets based on inputte
 | Program will convert age in Earth years to age in Jupiter years (11.86 Earth years) | "45 Earth Years" |  "3.8 Jupiter years"  |
 | Program will convert age in Earth years to age in Saturn years (29.46 Earth years) | "27 Earth Years" |  "0.9 Saturn years"  |
 | Program will convert age in Earth years to age in Uranus years (84.01 Earth years) | "42 Earth Years" |  "0.5 Uranus years"  |
+| Program will convert age in Earth years to age in Pluto years (248.59 Earth years) | "42 Earth Years" |  "0.17 Pluto years"  |
 | Program will determine remaining life expectancy in Earth years | current age: "56" life expectancy "76" |  "20 Earth years"  |
 | Program will determine remaining life expectancy in for each planet | current age: "56" life expectancy "76" |  "32 Venus years", "1.7 Jupiter years"  |
 | If a user has already surpassed their life expectancy, program will calculate their years beyond expectancy | current age: "99" life expectancy "76" |  "23 Earth years beyond expectancy"  |
-| If a user has already surpassed their life expectancy, program will calculate their years beyond expectancy for other planets| current age: "99" life expectancy "76" |  "95.8 Mars years beyond expectancy"  |
+
 
 
 ## Setup/Installation Requirements
