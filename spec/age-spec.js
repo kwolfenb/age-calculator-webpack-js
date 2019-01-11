@@ -3,18 +3,40 @@ describe('Age', function() {
   var reusableAge;
 
   beforeEach(function() {
+    //age from reusableAge is 21    
     reusableAge = new Age(21);
   });
 
-  it('should return inputted age', function() {
-    //age from reusableAge is 21
+  it('should return inputted age in Earth years', function() {
     expect(reusableAge.earthAge).toEqual(21);
   });
 
   it('should return age in Mercury years', function() {
-    let mercuryYears = reusableAge.mercuryAge();
-    let result = 21/.24;
-    expect(mercuryYears).toEqual(result);
+    const mercuryYear = .24;
+    let mercuryAge = reusableAge.mercuryAge();
+    let result = 21/mercuryYear;
+    expect(mercuryAge).toEqual(result);
+  });
+
+  it('should return age in Venus years', function() {
+    const venusYear = .62;
+    let venusAge = reusableAge.venusAge();
+    let result = 21/venusYear;
+    expect(venusAge).toEqual(result);
+  });
+
+  it('should return age in Mars years', function() {
+    const marsYear = 1.88;
+    let marsAge = reusableAge.marsAge();
+    let result = 21/marsYear;
+    expect(marsAge).toEqual(result);
+  });
+
+  it('should return age in Jupiter years', function() {
+    const jupiterYear = 11.86;
+    let jupiterAge = reusableAge.jupiterAge();
+    let result = 21/jupiterYear;
+    expect(jupiterAge).toEqual(result);
   });
 
   
