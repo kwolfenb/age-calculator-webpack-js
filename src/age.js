@@ -6,7 +6,7 @@ export class Age{
 
   mercuryAge() {
     const mercuryYear = .24;
-    let mercuryYears = (this.earthAge * mercuryYear);
+    let mercuryYears = (this.earthAge / mercuryYear);
     return mercuryYears; 
   }
 

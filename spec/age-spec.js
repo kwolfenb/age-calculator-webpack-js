@@ -11,6 +11,12 @@ describe('Age', function() {
     expect(reusableAge.earthAge).toEqual(21);
   });
 
+  it('should return age in Mercury years', function() {
+    let mercuryYears = reusableAge.mercuryAge();
+    let result = 21/.24;
+    expect(mercuryYears).toEqual(result);
+  });
+
   
 
 
