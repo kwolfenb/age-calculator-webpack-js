@@ -12,7 +12,8 @@ _Create a program that calculates a user's age on other planets based on inputte
 ### Specs
 | Spec | Input |  Expected Output  |
 | :-------------    | :------------- | :------------- | 
-| Program will accept an age input | "21" |  Returns 21  |
+| Program will accept a birth date input | "1998, 0, 1" |  January 1, 1998  |
+| Program will calculate age in years based on birth date input | "1998, 0, 1" |  "21 years old" |
 | Program will convert age in Earth years to age in Mercury years (.24 Earth years) | "21 Earth Years" |  "87.5 Mercury years"  |
 | Program will convert age in Earth years to age in Venus years (.62 Earth years) | "30 Earth Years" |  "48.4 Mercury years"  |
 | Program will convert age in Earth years to age in Mars years (1.88 Earth years) | "16 Earth Years" |  "8.5 Mars years"  |
@@ -22,7 +23,7 @@ _Create a program that calculates a user's age on other planets based on inputte
 | Program will convert age in Earth years to age in Pluto years (248.59 Earth years) | "42 Earth Years" |  "0.17 Pluto years"  |
 | Program will determine remaining life expectancy in Earth years | current age: "56" life expectancy "76" |  "20 Earth years"  |
 | Program will determine remaining life expectancy in for each planet | current age: "56" life expectancy "76" |  "32 Venus years", "1.7 Jupiter years"  |
-| If a user has already surpassed their life expectancy, program will calculate their years beyond expectancy | current age: "99" life expectancy "76" |  "23 Earth years beyond expectancy"  |
+| If a user has already surpassed their life expectancy, program will calculate their years beyond expectancy | current age: "99" life expectancy "76" |  "-23 years"  |
 
 
 

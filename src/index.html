@@ -4,6 +4,53 @@
     <title>Age Calculator</title>
   </head>
   <body>
+    <div class="container">
+      <h2>Age Calculator</h2>
+      <form id="birthdate">
+        <label for="birthdate">Month</label>
+        <input type="date" name="birthdate" id="inputDate">
+        <button type="submit">Submit</button>
+      </form>
+      <h3 id="result">Your current age in Earth years is <span id="earthYears"></span>. <br>
+      Click a planet to see how old you would be there!</h3>
+      <hr>
+      <div class="planets">
+        <div class="row">
+          <div class="col-md">
+            <h4>Mercury</h4>
+            <img src="" id="mercury">
+            <h4 id="mercuryAge"></h4>
+          </div>
+          <div class="col-md">
+              <h4>Venus</h4>
+            <img src="" id="venus">
+            <h4 id="venusAge"></h4>
+          </div>
+          <div class="col-md">
+            <h4>Earth</h4>
+            <img src="" id="earth">
+            <h4 id="earthAge"></h4>            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md">
+            <h4>Mars</h4>
+            <img src="" id="mars">
+            <h4 id="marsAge"></h4>
+          </div>
+          <div class="col-md">
+            <h4>Jupiter</h4>
+            <img src="" id="jupiter">
+            <h4 id="jupiterAge"></h4>
+          </div>
+          <div class="col-md">
+            <h4>Pluto</h4>
+            <img src="" id="pluto">
+            <h4 id="plutoAge"></h4>
+          </div>
+        </div>
+      </div>
 
+    </div>
   </body>
 </html>

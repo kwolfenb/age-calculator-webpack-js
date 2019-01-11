@@ -1,8 +1,32 @@
 export class Age{
 
-  constructor(age) {
-    this.earthAge = age;
+  constructor(birthYear, birthMonth, birthDay) {
+    this.birthYear = birthYear;
+    this.birthMonth = birthMonth;
+    this.birthDay = birthDay;
+    this.earthAge;
     this.earthYearsExp;
+  }
+
+  calculateAge() {
+    let dob = new Date(this.birthYear, this.birthMonth, this.birthDay);
+    let today = new Date();
+    const oneDay = (1000 * 60 * 60 * 24);
+    let dobTime = dob.getTime();
+    let todayTime = today.getTime();
+    let ageTime = todayTime - dobTime;
+    let ageDays = (Math.round(ageTime/ oneDay));
+    let ageYears = Math.floor(ageDays/365);
+    this.earthAge = ageYears;
+  }
+
+  setEarthYearsExp(expYears) {
+    this.earthYearsExp = expYears;
+  }
+
+  remainingYears() {
+    let remainingYears = this.earthYearsExp - this.earthAge;
+    return remainingYears;
   }
 
   mercuryAge(years) {
@@ -34,27 +58,6 @@ export class Age{
     let plutoYears = (years / plutoYear);
     return plutoYears; 
   }
-
-  setEarthYearsExp(expYears) {
-    this.earthYearsExp = expYears;
-  }
-
-  remainingYears() {
-    let remainingYears = this.earthYearsExp - this.earthAge;
-    return remainingYears;
-  }
-
-  dateOfBirth(month, day, year) {
-    let dob = new Date(year, month, day);
-    return dob;
-  }
-
-  todaysDate() {
-    let d = new Date();
-    return d;
-  }
-
-
 }
 
 
