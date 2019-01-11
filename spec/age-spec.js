@@ -4,7 +4,7 @@ describe('Age', function() {
 
   beforeEach(function() {
     //age from reusableAge is 21
-    reusableAge = new Age(1998, 0, 1);
+    reusableAge = new Age(1998, 1, 1);
   });
 
   it('should return inputted birth day, month and year', function() {
@@ -16,10 +16,10 @@ describe('Age', function() {
     expect(reusableAge.birthDay).toEqual(day);
   });
   
-  it('should calculate age in years based on input birth date', function () {    
+  it('should calculate age in years based on input birth date', function () { 
     let reusableAgeYears = 21;
     reusableAge.calculateAge();
-    let currentAge = reusableAge.earthAge;
+    let currentAge = Math.round(reusableAge.earthAge);
     expect(currentAge).toEqual(reusableAgeYears);
   });
   
@@ -150,11 +150,13 @@ describe('Age', function() {
     expect(remainingEarthYears).toEqual(result);
   });
 
-
-
-
-  
-
-
+  it('should calculate number of Mayfly lifetimes user has lived', function() {
+    reusableAge.calculateAge();
+    let minutesInYear = (60*24*365);
+    let years = reusableAge.earthAge;
+    let mayflyLifetimes = reusableAge.mayfly(years);
+    let result = years*minutesInYear/5;
+    expect(mayflyLifetimes).toEqual(result);
+  });
 
 });

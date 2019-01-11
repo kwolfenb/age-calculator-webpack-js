@@ -58,6 +58,13 @@ export class Age{
     let plutoYears = (years / plutoYear);
     return plutoYears; 
   }
+
+  mayfly(years) {
+    const mayflyLifeMinutes = (5);
+    const minutesInYear = (60 * 24 * 365);
+    let result = (years*minutesInYear/mayflyLifeMinutes)
+    return result;
+  }
 }
 
 

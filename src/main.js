@@ -20,7 +20,10 @@ $(document).ready(function() {
     let birthMonth = inputArr[1];
     let birthDay = inputArr[2];
     let userAge = new Age(birthYear, birthMonth, birthDay);
+    
     userAge.calculateAge();
+    let mayFlyLifetimes = userAge.mayfly(userAge.earthAge);
+
 
     $("#result").show();
     $("#earthYears").text(userAge.earthAge);
@@ -31,6 +34,8 @@ $(document).ready(function() {
     $("#mars").attr('src', mars);
     $("#jupiter").attr('src', jupiter);
     $("#pluto").attr('src', pluto);
+
+    $('#mayfly').text(mayFlyLifetimes);
     
     $('#mercury').click(function() {
       let earthYears = userAge.earthAge;
@@ -38,29 +43,34 @@ $(document).ready(function() {
       $('#mercuryAge').show();
       $('#mercuryResult').text(mercuryAge);
     });
+
     $('#venus').click(function() {
       let earthYears = userAge.earthAge;
       let venusAge = (userAge.venusAge(earthYears)).toFixed(1);
       $('#venusAge').show();
       $('#venusResult').text(venusAge);
     });
+
     $('#earth').click(function() {
       let earthAge = userAge.earthAge;
       $('#earthAge').show();
       $('#earthResult').text(earthAge);
     });
+
     $('#mars').click(function() {
       let earthYears = userAge.earthAge;
       let marsAge = (userAge.marsAge(earthYears)).toFixed(1);
       $('#marsAge').show();
       $('#marsResult').text(marsAge);
     });
+
     $('#jupiter').click(function() {
       let earthYears = userAge.earthAge;
       let jupiterAge = (userAge.jupiterAge(earthYears)).toFixed(1);
       $('#jupiterAge').show();
       $('#jupiterResult').text(jupiterAge);
     });
+
     $('#pluto').click(function() {
       let earthYears = userAge.earthAge;
       let plutoAge = (userAge.plutoAge(earthYears)).toFixed(1);
@@ -68,6 +78,10 @@ $(document).ready(function() {
       $('#plutoResult').text(plutoAge);
     });
 
+  });
+
+  $('#reset').click(function() {
+    location.reload();
   });
 
 });
