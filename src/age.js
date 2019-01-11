@@ -2,7 +2,7 @@ export class Age{
 
   constructor(birthYear, birthMonth, birthDay) {
     this.birthYear = birthYear;
-    this.birthMonth = birthMonth;
+    this.birthMonth = birthMonth-1;
     this.birthDay = birthDay;
     this.earthAge;
     this.earthYearsExp;
@@ -16,7 +16,7 @@ export class Age{
     let todayTime = today.getTime();
     let ageTime = todayTime - dobTime;
     let ageDays = (Math.round(ageTime/ oneDay));
-    let ageYears = Math.floor(ageDays/365);
+    let ageYears = (ageDays/365).toFixed(1);
     this.earthAge = ageYears;
   }
 

@@ -1,11 +1,23 @@
-body {
-  background-color: black;
+h2 {
+  margin: 25%;
+  padding: 5%;
+}
+h4#result, h4#instructions, #birthdate {
+  padding: 2%;
+}
+
+.container {
+  padding-bottom: 5%;
 }
 
 img {
   height: 250px;
   width: 250px;
 }
-#result {
+#result, .planets {
+  display: none;
+}
+
+#mercuryAge, #venusAge, #earthAge, #marsAge, #jupiterAge, #plutoAge {
   display: none;
 }
